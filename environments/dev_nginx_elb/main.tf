@@ -17,6 +17,7 @@ module "vpc" {
 module "nat" {
   source               = "../../modules/nat"
   vpc_cidr             = "${module.vpc.vpc_default_cidr}"
+  ami_nat              = "${module.amis.ami_latest_nat}"
   aws_vpc_id           = "${module.vpc.aws_vpc_main_id}"
   public_subnets       = "${module.vpc.public_subnets}"
   private_subnets      = "${module.vpc.private_subnets}"

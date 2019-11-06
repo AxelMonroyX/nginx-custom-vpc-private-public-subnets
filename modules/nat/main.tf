@@ -84,9 +84,9 @@ resource "aws_security_group" "nat" {
 }
 
 resource "aws_instance" "nat" {
-  ami                         = "ami-02cb555e324696ced"          # REPLACE
-  availability_zone           = "us-east-1a"
-  instance_type               = "m1.small"
+  ami                         = "${var.ami_nat}"          
+  availability_zone           = "${var.region}a"
+  instance_type               = "${var.ami_nat}"
   key_name                    = "${var.key_name}"
   vpc_security_group_ids      = ["${aws_security_group.nat.id}"]
   subnet_id                   = "${var.public_subnets[0]}"
