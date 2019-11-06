@@ -86,7 +86,7 @@ resource "aws_security_group" "nat" {
 resource "aws_instance" "nat" {
   ami                         = "${var.ami_nat}"          
   availability_zone           = "${var.region}a"
-  instance_type               = "${var.ami_nat}"
+  instance_type               = "${var.nat_instance_type}"
   key_name                    = "${var.key_name}"
   vpc_security_group_ids      = ["${aws_security_group.nat.id}"]
   subnet_id                   = "${var.public_subnets[0]}"

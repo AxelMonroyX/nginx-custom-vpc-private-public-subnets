@@ -9,3 +9,6 @@ ssh-add $PWD/private/ssh/key_access_asg_nginx_example.pem # To allow agent forwa
 cd environments/dev_nginx_elb/
 terraform init
 terraform apply
+
+
+# TODO: Replace with docker to install terraform to not have to use local terraform
