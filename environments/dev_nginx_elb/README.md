@@ -8,6 +8,4 @@
 
 | Name | Description |
 |------|-------------|
-| ami_ubuntu_18_04 | AMI used for the instances |
-| dns_name | Enter to this DNS to access the webpage |
-| my_ip | IP for access to SSH |
+| dns\_name | Enter to this DNS to access the webpage |
