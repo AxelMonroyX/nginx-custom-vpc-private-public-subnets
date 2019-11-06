@@ -1,4 +1,4 @@
-# NGINX AutoScalingGroup with ELB
+# NGINX AutoScalingGroup with ELB on Custom VPC and private subnet on RDS 
 ![aws-diagram](./documentation/aws-diagram.png)
 
 ### Prerequisites

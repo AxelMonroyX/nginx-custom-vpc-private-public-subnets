@@ -43,7 +43,7 @@ module "asg_example_elb" {
   source               = "../../modules/asg_elb"
   environment          = "${var.environment}"
   instance_type        = "t2.micro"
-  size                 = 1
+  size                 = 3
   allow_ssh_cidr_block = "${module.vpc.vpc_default_cidr}"
   ami                  = "${module.amis.ami_ubuntu_18_04}"
   vpc_id               = "${module.vpc.aws_vpc_main_id}"
